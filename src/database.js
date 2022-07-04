@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
+const URI = process.env.MONGODB_URI;
+
 mongoose
-  .connect("mongodb://localhost/graphqlreactdb", {
+  .connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
